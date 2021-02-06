@@ -1,16 +1,12 @@
 import create from 'zustand';
 
-const increase = (set) => {
-  return () => set(state => ({ count: state.count + 1 }))
-};
-
-const clear = (set) => {
-  return () => set({ count: 0 })
-};
-
 const actions = (set) => ({
-  increase: increase(set),
-  clear: clear(set),
+  increase: () => set(state => ({ 
+    count: state.count + 1 
+  })),
+  clear: () => set({ 
+    count: 0 
+  }),
 });
 
 const useStore = create(set => ({

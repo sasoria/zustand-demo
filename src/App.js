@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import useStore from './store/store';
 import { selectCount } from './store/selectors';
